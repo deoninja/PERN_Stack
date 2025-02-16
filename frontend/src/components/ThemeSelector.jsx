@@ -18,9 +18,9 @@ function ThemeSelector() {
         w-56 sm:w-64 md:w-72 lg:w-80 border border-base-content/10
         max-h-[60vh] overflow-y-auto"
       >
-        {THEMES.map((themeOption) => (
+        {THEMES.map((themeOption, index) => (
           <button
-            key={themeOption.name}
+          key={themeOption.id || index}
             className={`w-full px-4 py-3 rounded-xl flex items-center gap-3 transition-colors hover:cursor-pointer
                 ${
                   theme === themeOption.name
